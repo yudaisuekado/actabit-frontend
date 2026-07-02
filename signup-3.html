@@ -267,7 +267,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       </div>
 
       <label style="display:flex;align-items:flex-start;gap:8px;margin-bottom:24px;font-size:13px;color:var(--sub);cursor:pointer">
-        <input type="checkbox" style="margin-top:3px">
+        <input type="checkbox" id="agree-checkbox" style="margin-top:3px">
         <span><a href="terms.html" style="color:var(--primary)">利用規約</a>および<a href="privacy.html" style="color:var(--primary)">プライバシーポリシー</a>に同意します</span>
       </label>
 
@@ -385,6 +385,12 @@ async function submitStep3() {
   var btn = document.getElementById('submit-btn');
   var errDiv = document.getElementById('error-msg');
   errDiv.style.display = 'none';
+
+  var agreeBox = document.getElementById('agree-checkbox');
+  if (!agreeBox || !agreeBox.checked) {
+    errDiv.textContent = '利用規約およびプライバシーポリシーへの同意が必要です。';
+    errDiv.style.display = 'block'; return;
+  }
 
   var token = localStorage.getItem('actabit_token');
   var planCode = localStorage.getItem('actabit_plan') || 'standard';
