@@ -232,7 +232,30 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 <section class="section-sm">
   <div class="container" style="max-width:720px">
     <div style="display:flex;flex-direction:column;gap:16px">
-      
+      <label class="card" style="display:flex;align-items:center;gap:20px;padding:24px;cursor:pointer;border:2px solid var(--border)">
+        <input type="radio" name="plan" value="light" style="width:20px;height:20px;accent-color:var(--primary)">
+        <div style="flex:1">
+          <div style="font-size:16px;font-weight:700">ライトプラン</div>
+          <div style="font-size:13px;color:var(--sub)">月4回・各30分（週1回程度）</div>
+        </div>
+        <div style="font-size:22px;font-weight:800;color:var(--primary)">¥9,980<span style="font-size:12px;font-weight:400;color:var(--muted)">/月(税抜)</span></div>
+      </label>
+      <label class="card" style="display:flex;align-items:center;gap:20px;padding:24px;cursor:pointer;border:2px solid var(--primary);background:var(--primary-light)">
+        <input type="radio" name="plan" value="standard" checked style="width:20px;height:20px;accent-color:var(--primary)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:8px"><div style="font-size:16px;font-weight:700">スタンダードプラン</div><span class="badge badge-orange" style="font-size:11px">人気</span></div>
+          <div style="font-size:13px;color:var(--sub)">月8回・各30分（週2回程度）</div>
+        </div>
+        <div style="font-size:22px;font-weight:800;color:var(--primary)">¥18,980<span style="font-size:12px;font-weight:400;color:var(--muted)">/月(税抜)</span></div>
+      </label>
+      <label class="card" style="display:flex;align-items:center;gap:20px;padding:24px;cursor:pointer;border:2px solid var(--border)">
+        <input type="radio" name="plan" value="standard_plus" style="width:20px;height:20px;accent-color:var(--primary)">
+        <div style="flex:1">
+          <div style="font-size:16px;font-weight:700">スタンダード+プラン</div>
+          <div style="font-size:13px;color:var(--sub)">月8回・各30分・2人のスタッフ</div>
+        </div>
+        <div style="font-size:22px;font-weight:800;color:var(--primary)">¥19,880<span style="font-size:12px;font-weight:400;color:var(--muted)">/月(税抜)</span></div>
+      </label>
     </div>
     <div class="alert" style="margin-top:24px;padding:14px 18px;background:var(--secondary-light);border-radius:var(--r-sm);display:flex;gap:10px;align-items:flex-start">
       <div style="color:var(--secondary);flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></div>
