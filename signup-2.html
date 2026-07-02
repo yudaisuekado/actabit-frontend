@@ -263,14 +263,17 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       <div class="form-group"><label class="form-label">電話番号 <span style="color:var(--danger)">*</span></label><input type="tel" class="form-input" id="member-phone" placeholder="090-0000-0000"></div>
       <div class="form-group">
         <label class="form-label">お申し込みされる方とのご関係 <span style="color:var(--danger)">*</span></label>
-        <select class="form-input">
+        <select id="member-relationship" class="form-input">
           <option value="">選択してください</option>
-          <option>本人（自分のために申し込む）</option>
-          <option>子</option>
-          <option>配偶者</option>
-          <option>孫</option>
-          <option>その他親族</option>
-          <option>その他</option>
+          <option value="本人（自分のために申し込む）">本人（自分のために申し込む）</option>
+          <option value="父">父</option>
+          <option value="母">母</option>
+          <option value="祖父">祖父</option>
+          <option value="祖母">祖母</option>
+          <option value="配偶者">配偶者</option>
+          <option value="子">子</option>
+          <option value="孫">孫</option>
+          <option value="その他">その他</option>
         </select>
       </div>
     </div>
