@@ -349,5 +349,22 @@ function savePlan(e) {
   }
 }
 </script>
+
+<script>
+// プラン選択時のカードハイライト
+document.querySelectorAll('input[name="plan"]').forEach(function(radio) {
+  radio.addEventListener('change', function() {
+    document.querySelectorAll('label.card').forEach(function(label) {
+      label.style.border = '2px solid var(--border)';
+      label.style.background = '';
+    });
+    var selectedLabel = this.closest('label');
+    if (selectedLabel) {
+      selectedLabel.style.border = '2px solid var(--primary)';
+      selectedLabel.style.background = 'var(--primary-light)';
+    }
+  });
+});
+</script>
 </body>
 </html>
